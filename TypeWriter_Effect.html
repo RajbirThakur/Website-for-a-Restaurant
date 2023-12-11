@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeWritter Effect</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+        .abc{
+            position: relative;
+            top: 10px;
+            width: 290px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid rgba(255, 255, 255, 0.75);
+            animation: typewriter 4s steps(48) 1s 1 normal both, blinkTextCursor 500ms steps(48) normal;
+            animation-delay: 2s;
+        }
+        @keyframes typewriter {
+            from{
+                width: 0px;
+            }
+            to{
+                width: 290px;
+            }
+        }
+        @keyframes blinkTextCursor {
+            from{
+                border-right-color: rgba(255, 255, 255, 0.75);
+            }
+            to{
+                border-right-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="abc ani">Explore the different kinds of Pizza's with us</div>
+</body>
+</html>

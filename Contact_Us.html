@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #abc{
+        position: absolute;
+        right: 15px;
+        top: 34px;
+        font-size: 15px;
+        padding: 15px;
+        border-radius: 25px;
+        border: 3px solid black;
+    }
+    #navbar{
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+    }
+    #navbar::before{
+        content: '';
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 122px;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    #navbar ul{
+        display: flex;
+    }
+    #navbar ul li{
+        list-style: none;
+        padding: 20px;
+        /* margin: 15px; */
+        /* margin-bottom: 10px; */
+        margin-left: 10px;
+        margin-right: 10px;
+        transition-property: all;
+        transition-duration: 0.72s;
+    }
+    #navbar ul li a{
+        font-size: 22px;
+        font-weight: 900;
+        text-decoration: none;
+        color: white;
+        position: relative;
+        transition-property: all;
+        transition-duration: 0.6s;
+    }
+    #navbar ul li a::before{
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        bottom: -9px;
+        left: 0;
+        transition-property: all;
+        transition-duration: 0.72s;
+    }
+    #navbar ul li a:hover::before{
+        width: 100%;
+    }
+    #navbar ul li a:hover{
+        color: black;
+    }
+    #navbar ul li:hover{
+        background-color: white;
+        /* border: 3px solid black; */
+        border-radius: 22px;
+        /* text-decoration: underline; */
+    }
+    #logo{
+        height: 100px;
+        width: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition-property: all;
+        transition-duration: 0.6s;
+    }
+    #logo:hover{
+        transform: scale(1.37);
+        cursor: pointer;
+    }
+    #container-1{
+        display: grid;
+        height: 490px;
+        width: 100%;
+        margin-top: 20px;
+        grid-template-columns: repeat(2,730px);
+        column-gap: 5px;
+    }
+    .add{
+        height: 500px;
+        width: 730px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    #add-1::before{
+        content: '';
+        background: url(Hoshiarpur\ route\ photo.png);
+        position: absolute;
+        height: 500px;
+        width: 730px;
+        z-index: -1;
+        opacity: 0.95;
+    }
+    #bt{
+        font-size: 18px;
+        border-radius: 28px;
+        margin: 15px;
+        padding: 10px;
+        border: none;
+        background-color: rgb(84, 214, 84);
+    }
+    #bt a{
+        text-decoration: none;
+        color: aliceblue;
+        font-weight: bolder;
+    }
+    #bt:hover{
+        cursor: pointer;
+        background-color: rgb(92, 194, 92);
+    }
+    .adds_{
+        background-color: rgb(28, 34, 78);
+        height: 500px;
+        width: 722px;
+        color: aliceblue;
+        font-weight: bold;
+    }
+    .adds{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 415px;
+    }
+    #container-2{
+        margin-left: 8px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #InsideContainer-2_1{
+        height: 50px;
+        width: 325px;
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(28, 34, 78);
+        color: aliceblue;
+        border-bottom: 2px solid greenyellow;
+    }
+    #InsideContainer-2_2{
+        height: 247px;
+        width: 1160px;
+        background-color: rgb(28, 34, 78);
+        border: 0.1px solid rgb(28, 34, 78);
+    }
+    #InsideContainer-2_2 p{
+        color: aliceblue;
+    }
+    #InsideContainer-2_2 h2{
+        color: greenyellow;
+    }
+    #Section-4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    #Section-4::before{
+        content: '';
+        background-color: black;
+        position: absolute;
+        /* top: 0px;
+        left: 0px; */
+        width: 100%;
+        height: 600px;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    #Footer{
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+        grid-template-rows: repeat(2,100px);
+        grid-column-gap: 85px;
+    }
+    .foot{
+        /* border: 1px solid black; */
+        color: azure;
+    }
+    .ab:hover{
+        color: #00ccff;
+        cursor: pointer;
+    }
+    #ba{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+        color: black;
+        font-weight: 900;
+        font-size: 20px;
+        transition-property: all;
+        transition-duration: 0.4s;
+    }
+    #ba:hover{
+        background-color: greenyellow;
+        cursor: pointer;
+        transform: scale(0.86);
+    }
+    #foot-4{
+        display: grid;
+        grid-template-columns: repeat(2,5px);
+        grid-template-rows: repeat(3,5px);
+        grid-column-gap: 70px;
+        grid-row-gap: 30px;
+    }
+    #foot-5{
+        display: grid;
+        grid-template-columns: repeat(2,5px);
+        grid-template-rows: repeat(2,5px);
+        grid-column-gap: 70px;
+        grid-row-gap: 40px;
+    }
+    #foot-6{
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+        grid-gap: 5px;
+    }
+    #foot-1,#foot-2,#foot-3{
+        font-size: 25px;
+        font-weight: 900;
+    }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <img id="logo" src="Photo.jpeg" alt="">
+        <ul>
+            <li><a href="Source.html">Home</a></li>
+            <!-- <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li> -->
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <input id="abc" type="text" placeholder="Search this website">
+    </nav>
+    <div id="container-1">
+        <div id="add-1" class="add">
+            <button id="bt"><a href="https://www.google.co.in/maps/place/Aslamabad,+Hoshiarpur,+Punjab/@31.5153638,75.9256919,15z/data=!3m1!4b1!4m6!3m5!1s0x391ae31a81fe3069:0xb33c56ee877fab29!8m2!3d31.5151622!4d75.9333458!16s%2Fg%2F1tjmc16_?entry=ttu" target="_blank">Open in maps</a></button>
+        </div>
+        <div id="add-2" class="adds_">
+            <h1 style="margin-left: 10px;">Contact</h1>
+            <div class="adds">
+                <div>
+                    <i class="material-icons" style="font-size:20px;color:greenyellow">location_on</i> 
+                    &nbsp;56/250 Ajit Nagar<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Aslamabad, Hoshiarpur <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    3 km from the city center
+                </div>
+                <div>
+                    <i class="material-icons" style="font-size:20px;color:greenyellow">local_phone</i> &nbsp;Booking: +1500 240887 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    (7 days a week from 8:00 a.m. to 10:00 p.m. (Indian time) <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Cost of a local call)
+                </div>
+                <div>
+                    <i class="material-icons" style="font-size:20px;color:greenyellow">local_phone</i> &nbsp;Call the hotel: +31 182 535555
+                </div>
+                <div>
+                    <i class="material-icons" style="font-size:20px;color:greenyellow">email</i> &nbsp;E-mail address: Mighty_Munchables@yahoo  .com
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-2">
+        <h1 style="font-size: 25pxpx; margin-left: 20px; font-weight: lighter;">Route</h1>
+        <h1 style="font-size: 32px; margin-top: 10px; margin-left: 20px; font-weight: bolder;">How to get to Restuarant</h1>
+        <div id="InsideContainer-2_1">
+            <i class="fa fa-bus" style=""></i> &nbsp;By Public Transportation
+        </div>
+        <div id="InsideContainer-2_2">
+            <h2>Transportation from Hoshiarpur Central Station</h2>
+            <p>Guests can get to the hotel by using public transport. From the city centre, multiple buses go straight to the Bhagat Singh Chowk, which is a bus stop with only 5 minutes walking distance to the hotel.</p>
+            <h2>Transportation from Amritsar</h2>
+            <p>When traveling from Amritsar Airport, a train from Amritsar departs directly to Ambala, then from Ambala a direct train  departs to Hoshiarpur Central station. From Hoshiarpur Central station, there are multiple buses directly to a bus stop close by the hotel.</p>
+        </div>
+    </div>
+    <section id="Section-4">
+        <footer id="Footer">
+            <div class="foot" id="foot-1">What We Offer</div>
+            <div class="foot" id="foot-2">Information</div>
+            <div class="foot" id="foot-3">Newsletter</div>
+            <div class="foot" id="foot-4">
+                <div class="ab">Burger's</div>
+                <div class="ab">Pizzas</div>
+                <div class="ab">Desserts</div>
+                <div class="ab">Salads</div>
+                <div class="ab">Drinks</div>
+                <div class="ab">Seafood</div>
+            </div>
+            <div class="foot" id="foot-5">
+                <div class="ab">About Us</div>
+                <div class="ab">FAQ</div>
+                <div class="ab">Our Menu</div>
+                <div class="ab">Contact Us</div>
+            </div>
+            <div class="foot" id="foot-6">
+                <div class="ab">Sign up for latest updates</div>
+                <div id="ba">
+                    <div>Subscribe</div>
+                </div>
+            </div>
+        </footer>
+        <div style="color: white; margin-top: 50px; letter-spacing: 5px; font-size: 35px;">@2022 | All Rights Reserved | Designed By Rajbir Thakur</div>
+    </section>
+</body>
+</html>

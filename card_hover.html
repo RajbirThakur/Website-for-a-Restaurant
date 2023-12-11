@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .submit{
+            display: flex;
+            height: 50px;
+            width: 108px;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 0.89px solid black;
+            transition-property: all;
+            transition-duration: 0.4s;
+            position: relative;
+            z-index: 2;
+            font-weight: 900;
+        }
+        .submit::before{
+            content: '';
+            background-color: black;
+            position: absolute;
+            width: 0%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: -1;
+            transition-property: all;
+            transition-duration: 0.79s;
+        }
+        .submit:hover::before{
+            width: 100%;
+        }
+        .submit:hover{
+            /* transform: scale(0.89);
+            background-color: yellow; */
+            color: white;
+            cursor: pointer;
+        }
+        .container{
+            height: 800px;
+            width: 100%;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column-gap: 295px;
+        }
+        .box{
+            height: 418px;
+            width: 300px;
+            border-bottom: 0.1px solid rgb(151, 145, 145);
+            border-top: 0.1px solid rgb(151, 145, 145);
+            padding: 2px;
+        }
+        .box:hover{
+            box-shadow: 1px 1px 20px rgb(173, 170, 170);
+            border-radius: 30px;
+        }
+        #asd{
+            position: relative;
+            height: 280px;
+            width: 300px;
+            z-index: 2;
+        }
+        #hove{
+            height: 100px;
+            width: 300px;
+            /* border: 0.1px solid red; */
+            background-color: aquamarine;
+            position: relative;
+            transform: translateY(-99px);
+            z-index: 1;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.41s;
+        }
+        #box1:hover #hove{
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <div id="asd">
+                <h2 style="text-align: center;">Burger</h2>
+                <img src="2-1.webp" alt="" width="300px" height="233px">
+            </div>
+            <div id="hove">
+                While making our salads we have followed the Italian recipie ...
+                <a href="www.google.com" target="_blank" class="submit">Read More</a>
+            </div>
+        </div>
+        <div class="box" id="box2">
+            <h2 style="text-align: center;">Sea Food</h2>
+            <img src="6-1.jpg" alt="" width="300px" height="233px">
+        </div>
+    </div>
+</body>
+</html>
